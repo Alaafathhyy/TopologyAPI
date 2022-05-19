@@ -26,12 +26,14 @@ public class API {
     }
 
     public boolean deleteTopology(String id) {
+        // Delete a given topology from memory
         Topology topology = this.Memory.get(id);
         if (topology == null) return false;
         return this.Memory.remove(id, topology);
     }
 
     public ArrayList<Device> getDevices(String id) {
+        // get all the devices in a given topology
         Topology topology = this.Memory.get(id);
         ArrayList<Device> deviceList = new ArrayList<>();
         if (topology == null)
@@ -43,6 +45,7 @@ public class API {
     }
 
     public ArrayList<Device> getDevicesFromNetList(String id, String node) {
+        //get all the devices that connected to a given node in a given topology
         Topology topology = this.Memory.get(id);
         if (topology == null)
             return null;
@@ -59,6 +62,7 @@ public class API {
     }
 
     public boolean readFromJson(String file) {
+        //read the topology form a file
         JSONParser jsonParser = new JSONParser();
         System.out.println();
         try (FileReader reader = new FileReader(file)) {

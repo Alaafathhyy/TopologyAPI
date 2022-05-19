@@ -7,6 +7,7 @@ public class Device {
     protected double min;
 
     Device() {
+        // the name define the type
         this.name = "";
         this.defVal = this.max = this.min = 0.0;
     }

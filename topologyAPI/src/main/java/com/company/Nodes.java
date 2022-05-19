@@ -10,16 +10,22 @@ import java.util.Set;
 public class Nodes {
     private final HashMap<String, List<Component>> nodes;
 
-    Nodes(){
-        nodes=new HashMap<>();
+    Nodes() {
+        nodes = new HashMap<>();
     }
+
     public Nodes(HashMap<String, List<Component>> nodes) {
         this.nodes = nodes;
     }
+
     public HashMap<String, List<Component>> getNodes() {
         return nodes;
     }
+
     public void addNode(JSONObject jsonObj) {
+        /* take a jsonObj hold the components to extract each component
+        and get the netlist to mapping the component to
+         */
         for (JSONObject component : (List<JSONObject>) jsonObj.get("components")) {
             JSONObject netList = (JSONObject) component.get("netlist");
 

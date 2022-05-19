@@ -1,11 +1,9 @@
 package com.company;
 
-import java.lang.reflect.Array;
 import java.util.*;
 
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
+
 
 public class Main {
     private static final API app = new API();
@@ -32,7 +30,7 @@ public class Main {
                 case 1 -> {
                     System.out.println("Enter file name");
                     String fileName = input.next();
-                    fileName = "C:\\InternTask\\task2\\untitled\\src\\main\\java\\com\\company\\" + fileName;
+                    //fileName = "C:\\InternTask\\task2\\untitled\\src\\main\\java\\com\\company\\" + fileName;
                     File file = new File(fileName);
                     if (!file.exists()) {
                         System.out.println("No Such File");
