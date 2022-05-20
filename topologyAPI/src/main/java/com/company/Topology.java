@@ -17,7 +17,7 @@ public class Topology {
         return NodeMap.getNodes();
     }
 
-    Topology(String id, List<JSONObject> components, JSONObject JSON) {
+    public Topology(String id, List<JSONObject> components, JSONObject JSON) {
         this.id = id;
         setComponentList(components);
         this.NodeMap = new Nodes();

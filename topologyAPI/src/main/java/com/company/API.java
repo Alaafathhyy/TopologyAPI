@@ -1,5 +1,6 @@
 package com.company;
 
+import com.company.Topology;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.ParseException;
 import org.json.simple.parser.JSONParser;
