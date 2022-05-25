@@ -3,6 +3,7 @@ package com.company;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Set;
 
 public class apiGui {
     private static final API app = new API();
@@ -17,56 +18,35 @@ public class apiGui {
 
     public apiGui() {
 
-        btn1.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                JFrame frame = new JFrame("Input");
-                frame.setContentPane(new InputFile(app).panelMain);
-                frame.setVisible(true);
+        btn1.addActionListener(e -> {
+            JFrame frame = new JFrame("Input");
+            frame.setContentPane(new InputFile(app).panelMain);
+            frame.setVisible(true);
 
-            }
         });
-        btn2.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                JFrame frame = new JFrame("Input");
-                frame.setContentPane(new TakeInput(2, app).PanelMain);
-                frame.setVisible(true);
+        btn2.addActionListener(e -> {
+            JFrame frame = new JFrame("Input");
+            frame.setContentPane(new TakeInput(2, app).PanelMain);
+            frame.setVisible(true);
 
-            }
         });
-        btn3.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                JFrame frame = new JFrame("Input");
-                frame.setContentPane(new TakeInput(3, app).PanelMain);
-                frame.setVisible(true);
-            }
+        btn3.addActionListener(e -> new RetriveData().GetTopologies(app));
+        btn4.addActionListener(e -> {
+            JFrame frame = new JFrame("Input");
+            frame.setContentPane(new TakeInput(4, app).PanelMain);
+            frame.setVisible(true);
         });
-        btn4.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                JFrame frame = new JFrame("Input");
-                frame.setContentPane(new TakeInput(4, app).PanelMain);
-                frame.setVisible(true);
-            }
+        btn5.addActionListener(e -> {
+            JFrame frame = new JFrame("Input");
+            frame.setContentPane(new TakeInput(5, app).PanelMain);
+            frame.setVisible(true);
         });
-        btn5.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                JFrame frame = new JFrame("Input");
-                frame.setContentPane(new TakeInput(5, app).PanelMain);
-                frame.setVisible(true);
-            }
+        btn6.addActionListener(e -> {
+            JFrame frame = new JFrame("Input");
+            frame.setContentPane(new TakeInput(6, app).PanelMain);
+            frame.setVisible(true);
         });
-        btn6.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                JFrame frame = new JFrame("Input");
-                frame.setContentPane(new TakeInput(6, app).PanelMain);
-                frame.setVisible(true);
-            }
-        });
+
 
     }
 

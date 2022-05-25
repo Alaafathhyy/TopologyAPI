@@ -27,7 +27,21 @@ public class Device {
         System.out.println("\tMax = " + max);
     }
 
+    public double getDefVal() {
+        return defVal;
+    }
 
+    public double getMax() {
+        return max;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public double getMin() {
+        return min;
+    }
 }
 
 

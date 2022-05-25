@@ -3,6 +3,7 @@ package com.company;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Set;
 
 public class TakeInput {
     public JPanel PanelMain;
@@ -21,16 +22,15 @@ public class TakeInput {
                 topID = textField1.getText();
                 if (id == 6)
                     node = textField2.getText();
-
                 switch (id) {
                     case 2:
                         Query2();
-                    case 3:
-                        Query3();
                     case 4:
                         Query4();
                     case 5:
                         Query5();
+                    case 6:
+                        Query6();
                 }
             }
 
@@ -43,8 +43,6 @@ public class TakeInput {
                     JOptionPane.showMessageDialog(PanelMain, "Error in Write");
             }
 
-            private void Query3() {
-            }
 
             private void Query4() {
                 boolean flag = app.deleteTopology(topID);
@@ -56,6 +54,10 @@ public class TakeInput {
             }
 
             private void Query5() {
+                new RetriveData().getDevices(app,topID);
+            }
+            private void Query6() {
+                new RetriveData().getDevices(app,topID,node);
             }
         });
     }
